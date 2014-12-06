@@ -28,3 +28,7 @@ rm /opt/jdk/jdk-7u71-linux-x64.tar.gz
 
 echo 'export JAVA_HOME=/opt/jdk/jdk1.7.0_71' >> ~air/.bashrc
 echo 'export PATH="/home/air/bin:$JAVA_HOME/bin:$PATH"' >> ~air/.bashrc
+
+# Create the project source dir
+mkdir -p /src
+chown air:air /src

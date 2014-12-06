@@ -10,7 +10,7 @@ Pull:
 
     docker pull jeko/airbuild
 
-From your directory:
+From your air project directory:
 
     docker -it --rm -v `pwd`:/src jeko/airbuild
 
