@@ -1,0 +1,2 @@
+#!/bin/sh
+$AIR_HOME/bin/asdoc "$@"

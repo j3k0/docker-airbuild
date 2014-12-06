@@ -1,0 +1,2 @@
+#!/bin/sh
+wine "$AIR_HOME/bin/adl.exe" "$@"
