@@ -12,6 +12,9 @@ Pull:
 
 From your air project directory:
 
-    docker -it --rm -v `pwd`:/src jeko/airbuild
+    docker run -it --rm -v `pwd`:/src jeko/airbuild:latest mxmlc <arguments>
+    docker run -it --rm -v `pwd`:/src jeko/airbuild:latest adl <arguments>
+    docker run -it --rm -v `pwd`:/src jeko/airbuild:latest adt <arguments>
+    etc.
 
-
+An example project can be found here: https://github.com/j3k0/BaseAIRAppLinux
