@@ -1,6 +1,6 @@
 #!/bin/bash
-if [ test -e "/home/air/bin/$1" == /* ]]; then
-    /usr/bin/su - air -c "$@"
+if test -f "/home/air/bin/$1" ; then
+    su air -c "/home/air/bin/$*"
 else
     exec "$@"
 fi

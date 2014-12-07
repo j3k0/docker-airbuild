@@ -1,2 +1,3 @@
-#!/bin/sh
+#!/bin/bash
+. /home/air/setenv
 wine "$AIR_HOME/bin/adl.exe" "$@"

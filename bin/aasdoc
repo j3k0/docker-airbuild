@@ -1,2 +1,3 @@
 #!/bin/sh
+. /home/air/setenv
 $AIR_HOME/bin/aasdoc "$@"

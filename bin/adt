@@ -1,2 +1,3 @@
-#!/bin/sh
+#!/bin/bash
+. /home/air/setenv
 wine java -jar 'Z:\opt\air_sdk\lib\adt.jar' "$@"

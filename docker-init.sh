@@ -1,7 +1,7 @@
 #!/bin/bash
 
 adduser --disabled-password --gecos "" air
-echo 'export WINEDEBUG=fixme-all' >> ~air/.bashrc
+echo 'export WINEDEBUG=fixme-all' >> ~air/setenv
 
 cat << EOF > /docker-init-win-jdk.sh
 cd /home/air
@@ -18,7 +18,7 @@ cd /opt/air_sdk
 wget http://airdownload.adobe.com/air/win/download/latest/AIRSDK_Compiler.zip
 unzip AIRSDK_Compiler.zip
 rm AIRSDK_Compiler.zip
-echo 'export AIR_HOME=/opt/air_sdk' >> ~air/.bashrc
+echo 'export AIR_HOME=/opt/air_sdk' >> ~air/setenv
 
 mkdir -p /opt/jdk
 cd /opt/jdk
@@ -26,8 +26,10 @@ wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-
 tar xvzf jdk-7u71-linux-x64.tar.gz
 rm /opt/jdk/jdk-7u71-linux-x64.tar.gz
 
-echo 'export JAVA_HOME=/opt/jdk/jdk1.7.0_71' >> ~air/.bashrc
-echo 'export PATH="/home/air/bin:$JAVA_HOME/bin:$PATH"' >> ~air/.bashrc
+echo 'export JAVA_HOME=/opt/jdk/jdk1.7.0_71' >> ~air/setenv
+echo 'export PATH="/home/air/bin:$JAVA_HOME/bin:$PATH"' >> ~air/setenv
+
+echo '. ~air/setenv' >> ~air/.bashrc
 
 # Create the project source dir
 mkdir -p /src
