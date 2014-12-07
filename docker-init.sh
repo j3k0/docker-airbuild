@@ -8,7 +8,7 @@ cd /home/air
 wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u71-b14/jdk-7u71-windows-i586.exe
 wine jdk-7u71-windows-i586.exe
 sleep 1
-rm /opt/jdk/jdk-7u71-windows-i586.exe
+rm jdk-7u71-windows-i586.exe
 EOF
 chmod +x /docker-init-win-jdk.sh
 su - air -c /docker-init-win-jdk.sh
